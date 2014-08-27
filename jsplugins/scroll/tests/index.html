@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+.nums {bottom: 0px;height: 14px;position: absolute;right: 0;text-align: center;width: 258px;z-index: 999;}
+.pics_bg{bottom: 0px;height: 20px;position: absolute;right: 0;text-align: right;width: 225px;z-index: 998;background-color:#000;opacity: .8; filter: alpha(opacity=80); }
+.nums span {background-position: -180px 0px;cursor: pointer;display: inline-block;height: 12px;line-height: 12px;width: 12px;font-size:9px;
+margin-right:1px;background-color:#ffffff;opacity: .5; filter: alpha(opacity=50);color:#000000;font-family:Arial,Helvetica,Sans-Serif; padding:0px 5px;}
+.nums span.new_span {background-color:#ffffff; opacity: 1; filter: alpha(opacity=100);}
+.img_dd{width:304px;height:152px;overflow:hidden;}
+.pics{width:258px;height:277px;overflow:hidden;}
+.r1_bx2tin{width:304px; height:152px; overflow:hidden; float:left; display:inline;}
+.img_lb{padding:12px 10px 10px 10px;}
+.scroll_img{width:258px;}
+.arrow-left{top:20px;left:10px;width:30px;height:30px;background-color:#000;}
+.arrow-right{top:20px;right:10px;width:30px;height:30px;background-color:#000;}
+.lab_div{position:absolute;width:100%;text-align:center;height:20px;bottom:5px;left:0px;z-index:10;}
+.an_lab{width:15px;height:15px;display:inline-block;margin:0px 5px;background-color:#eee;color:#000;line-height:15px;overflow:hidden;cursor:pointer;}
+.lab_sel{background-color:#000;color:#fff;}
+</style>
+<script src="../../common/jquery.1.8.3.min.js" type="text/javascript" language="javascript"></script>
+<script src="js/ECar.scroll.js" type="text/javascript" language="javascript"></script>
+</head>
+
+<body>
+<div id="change_3">
+  <div class="nums"></div>
+  <div class="pics">
+        <div class="scroll_img" imgurl = "images/lb_img1.jpg"><a href="#" atext="11"></a></div>
+        <div class="scroll_img" imgurl = "images/lb_img1.jpg"><a href="#" atext="22"></a></div>
+        <div class="scroll_img" imgurl = "images/lb_img1.jpg"><a href="#" atext="33"></a></div>
+        <div class="scroll_img" imgurl = "images/lb_img1.jpg"><a href="#" atext="44"></a></div>
+  </div>
+</div>
+<script>
+ECar.scroll({'ele':'#change_3','arrow':true,'time':3000,'type':'scroll','class':'r1_bx2t1'});
+</script>
+</body>
+</html>
