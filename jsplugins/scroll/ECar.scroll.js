@@ -41,7 +41,7 @@
 				/*增加样式*/
 				$elem.addClass(settings.class);
 				
-				<!--生成html 结构 start-->
+				/*生成html 结构 start*/
 				/*加载前两张图片*/
 				var $scroll_li = $('.scroll_img',$elem),$scroll_len = $scroll_li.length,$scroll_box = $('.pics',$elem),$num = 1;
 				//for(var i = $scroll_len;i>0;i--){
@@ -92,7 +92,7 @@
 				var $left_btn =  $('.arrow-left',$elem);
 				var $right_btn =  $('.arrow-right',$elem);
 				
-				<!--生成html 结构 end-->
+				/*生成html 结构 end*/
 				
 				
 				/*鼠标移动到数字 跳转*/
