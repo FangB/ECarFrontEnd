@@ -1,3 +1,15 @@
+/**
+ * 广告轮播组件（支持懒加载）
+ * settings 设置：
+ * 1.settings.arrow:true/false 是否显示左右箭头
+ * 2.settings.time:3000 轮播间隔
+ * 3.settings.type: scroll/fade 轮播形式： 左右滚动/渐显
+ * 4.settings.class: 轮播组件样式
+ * 5.settings.width: 轮播为左右滚动时间，滚动宽度（默认为一屏宽）
+ * 
+ * @author zhangweiming
+ */
+ 
 ;(function($,ECar){
 	ECar.scroll = function(settings){
 		var scroll = function(settings){
