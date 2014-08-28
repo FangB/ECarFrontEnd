@@ -1,11 +1,11 @@
 /**
- * ¹ã¸æÂÖ²¥×é¼ş£¨Ö§³ÖÀÁ¼ÓÔØ£©
- * settings ÉèÖÃ£º
- * 1.settings.arrow:true/false ÊÇ·ñÏÔÊ¾×óÓÒ¼ıÍ·
- * 2.settings.time:3000 ÂÖ²¥¼ä¸ô
- * 3.settings.type: scroll/fade ÂÖ²¥ĞÎÊ½£º ×óÓÒ¹ö¶¯/½¥ÏÔ
- * 4.settings.class: ÂÖ²¥×é¼şÑùÊ½
- * 5.settings.width: ÂÖ²¥Îª×óÓÒ¹ö¶¯Ê±¼ä£¬¹ö¶¯¿í¶È£¨Ä¬ÈÏÎªÒ»ÆÁ¿í£©
+ * å¹¿å‘Šè½®æ’­ç»„ä»¶ï¼ˆæ”¯æŒæ‡’åŠ è½½ï¼‰
+ * settings è®¾ç½®ï¼š
+ * 1.settings.arrow:true/false æ˜¯å¦æ˜¾ç¤ºå·¦å³ç®­å¤´
+ * 2.settings.time:3000 è½®æ’­é—´éš”
+ * 3.settings.type: scroll/fade è½®æ’­å½¢å¼ï¼š å·¦å³æ»šåŠ¨/æ¸æ˜¾
+ * 4.settings.class: è½®æ’­ç»„ä»¶æ ·å¼
+ * 5.settings.width: è½®æ’­ä¸ºå·¦å³æ»šåŠ¨æ—¶é—´ï¼Œæ»šåŠ¨å®½åº¦ï¼ˆé»˜è®¤ä¸ºä¸€å±å®½ï¼‰
  *
  * @author zhangweiming
  */
@@ -19,7 +19,7 @@
 		var $elem = $(settings.ele),loadimg = true;
 		
 		scroll.prototype = {
-			init:function(settings){  //Éú³É½á¹¹
+			init:function(settings){  //ç”Ÿæˆç»“æ„
 				
 				if (typeof($elem) == "undefined" || $elem[0] == null) {
 					return false;
@@ -38,11 +38,11 @@
 		
 		scroll.main = function(){
 				
-				/*Ôö¼ÓÑùÊ½*/
+				/*å¢åŠ æ ·å¼*/
 				$elem.addClass(settings.class);
 				
-				<!--Éú³Éhtml ½á¹¹ start-->
-				/*¼ÓÔØÇ°Á½ÕÅÍ¼Æ¬*/
+				<!--ç”Ÿæˆhtml ç»“æ„ start-->
+				/*åŠ è½½å‰ä¸¤å¼ å›¾ç‰‡*/
 				var $scroll_li = $('.scroll_img',$elem),$scroll_len = $scroll_li.length,$scroll_box = $('.pics',$elem),$num = 1;
 				//for(var i = $scroll_len;i>0;i--){
 				var img_url1 = $scroll_li.eq(0).attr('imgurl');
@@ -71,13 +71,13 @@
 					$scroll_li.css({float:'left',display:'inline'});
 				}
 				
-				/*Éú³É×óÓÒ¼ıÍ·*/
+				/*ç”Ÿæˆå·¦å³ç®­å¤´*/
 				if(settings.arrow == true){
 					var $arrow_html = '<div class="arrow-left" style="position:absolute;"></div><div class="arrow-right"  style="position:absolute;"></div>';
 					$scroll_box.append($arrow_html);
 				}
 				
-				/*Éú³ÉÍ¼Æ¬±êÇ©*/
+				/*ç”Ÿæˆå›¾ç‰‡æ ‡ç­¾*/
 				var $lab_html = '<div class="lab_div">';
 				for(i=1;i<=$lab_len;i++){
 					if(i==1){
@@ -92,10 +92,10 @@
 				var $left_btn =  $('.arrow-left',$elem);
 				var $right_btn =  $('.arrow-right',$elem);
 				
-				<!--Éú³Éhtml ½á¹¹ end-->
+				<!--ç”Ÿæˆhtml ç»“æ„ end-->
 				
 				
-				/*Êó±êÒÆ¶¯µ½Êı×Ö Ìø×ª*/
+				/*é¼ æ ‡ç§»åŠ¨åˆ°æ•°å­— è·³è½¬*/
 				function step(k,move_arrow){
 					if (settings.type == 'scroll') {
 						step.prototype.scrollstep(k,move_arrow);
@@ -117,7 +117,7 @@
 					}
 				}
 				
-				/*×Ô¶¯ÂÖ²¥*/
+				/*è‡ªåŠ¨è½®æ’­*/
 				function move(k,move_arrow) {
 					if (settings.type == 'scroll'){
 						move.prototype.scrollmove(k);
@@ -185,7 +185,7 @@
 					}
 				}
 				
-				/*ÎªÍ¼Æ¬Ìí¼Ó ÊÂ¼ş */
+				/*ä¸ºå›¾ç‰‡æ·»åŠ  äº‹ä»¶ */
 				$scroll_li.mouseover(function(){
 					clearInterval(timer);
 					var $lab_num = $(this).index();
@@ -197,7 +197,7 @@
 					timer = setInterval(move,settings.time);
 				});
 				
-				/*ÎªÍ¼Æ¬±êÇ©Ìí¼Ó ÊÂ¼ş */
+				/*ä¸ºå›¾ç‰‡æ ‡ç­¾æ·»åŠ  äº‹ä»¶ */
 				$lab_ele.mouseover(function(){
 					clearInterval(timer);
 					var $lab_num = $(this).index();
@@ -209,7 +209,7 @@
 					timer = setInterval(move,settings.time);
 				});
 				
-				/*×óÓÒ¼ıÍ· µ¥»÷ÊÂ¼ş*/
+				/*å·¦å³ç®­å¤´ å•å‡»äº‹ä»¶*/
 				$left_btn.click(function(){
 					var $btn_num = $('.lab_sel',$elem).index();
 					if($btn_num == 0){
