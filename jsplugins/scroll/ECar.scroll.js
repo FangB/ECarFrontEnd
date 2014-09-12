@@ -6,7 +6,7 @@
  * 3.settings.type: scroll/fade 轮播形式： 左右滚动/渐显
  * 4.settings.class: 轮播组件样式
  * 5.settings.width: 轮播为左右滚动时间，滚动宽度（默认为一屏宽）
- * 
+ *  
  * @author zhangweiming
  */
  
